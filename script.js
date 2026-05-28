@@ -310,4 +310,31 @@
   function wait(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
+
+  function setupOptionCards() {
+    const optionCards = document.querySelectorAll(".option-card");
+    if (!optionCards.length) return;
+
+    optionCards.forEach((card) => {
+      card.addEventListener("click", () => {
+        optionCards.forEach((c) => c.classList.remove("selected"));
+        card.classList.add("selected");
+      });
+    });
+  }
+
+  function setupTabSwitcher() {
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    if (!tabButtons.length) return;
+
+    tabButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        tabButtons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+      });
+    });
+  }
+
+  setupOptionCards();
+  setupTabSwitcher();
 })();

@@ -1031,11 +1031,23 @@ select:focus {
 }
 
 .pricing-card {
-  padding: 40px;
-  text-align: center;
-  border-radius: 16px;
-  border: 1px solid var(--border);
-  margin-bottom: 24px;
+  padding: 24px;
+  text-align: left;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  background: var(--bg-alt);
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.pricing-card:hover {
+  background: var(--surface);
+}
+
+.pricing-card.selected {
+  border-color: var(--primary);
+  background: var(--bg);
 }
 
 .pricing-card.secondary {
@@ -1146,6 +1158,167 @@ select:focus {
 
 .topic-list a:hover {
   color: var(--primary);
+}
+
+/* Apple-style tab switcher */
+.tab-switcher {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.tab-btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  background: var(--bg-alt);
+  color: var(--text-muted);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.tab-btn:hover:not(.active) {
+  background: var(--border);
+}
+
+/* Apple-style option card */
+.option-card {
+  padding: 16px;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  background: var(--bg-alt);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.option-card:hover {
+  background: var(--surface);
+}
+
+.option-card.selected {
+  border-color: var(--primary);
+  background: var(--bg);
+}
+
+.option-card .option-icon {
+  font-size: 1.5rem;
+}
+
+.option-card .option-content {
+  flex: 1;
+}
+
+.option-card .option-title {
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.option-card .option-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.option-card .option-price {
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: right;
+}
+
+/* Info card */
+.info-card {
+  padding: 20px;
+  border-radius: 12px;
+  background: var(--bg-alt);
+  border-left: 4px solid var(--primary);
+}
+
+.info-card h4 {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.info-card p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Feature item with checkmark */
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.feature-item::before {
+  content: "•";
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* Divider line */
+.divider-line {
+  height: 1px;
+  background: var(--border);
+  margin: 20px 0;
+}
+
+/* Apple-style pricing grid */
+.pricing-grid-apple {
+  max-width: 500px;
+  margin: 0 auto 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pricing-details {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pricing-details h3 {
+  margin-bottom: 16px;
+  font-size: 1.125rem;
+}
+
+.feature-grid {
+  text-align: left;
+  padding: 16px 0;
+}
+
+.feature-grid .feature-item {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.feature-grid .feature-item:last-child {
+  border-bottom: none;
+}
+
+.pricing-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.pricing-actions .btn {
+  width: 100%;
 }
 
 .fade-in {
