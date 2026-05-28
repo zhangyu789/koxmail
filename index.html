@@ -28,12 +28,12 @@
         <a href="index.html#pricing">价格</a>
         <a href="index.html#about">关于我们</a>
         <a href="index.html#faq">常见问题</a>
+        <a href="index.html#blog">博客</a>
       </nav>
 
       <div class="header-actions">
         <a class="btn btn-ghost" href="login.html">登录</a>
         <a class="btn btn-accent" href="register.html">免费注册</a>
-        <button class="theme-toggle" id="themeToggle" aria-label="切换暗黑模式">🌓</button>
       </div>
     </div>
   </header>
@@ -45,18 +45,54 @@
           <p class="eyebrow">KoxMail</p>
           <h1>重新定义邮箱体验</h1>
           <p class="lead">银行级安全加密，极速稳定的云端邮箱服务</p>
+          <div class="hero-features">
+            <span class="hero-feature-tag">端到端加密</span>
+            <span class="hero-feature-tag">无限容量</span>
+            <span class="hero-feature-tag">智能分类</span>
+          </div>
           <div class="hero-actions">
             <a class="btn btn-accent" href="register.html">免费注册</a>
             <a class="btn btn-outline" href="#features">了解更多</a>
           </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="hero-stat-value">500万+</span>
+              <span class="hero-stat-label">全球用户</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+              <span class="hero-stat-value">99.9%</span>
+              <span class="hero-stat-label">服务可用性</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+              <span class="hero-stat-value">50+</span>
+              <span class="hero-stat-label">国家覆盖</span>
+            </div>
+          </div>
         </div>
         <div class="hero-art">
+          <div class="hero-decor"></div>
           <div class="mock-mail">
-            <div class="mail-top">KoxMail</div>
+            <div class="mail-top">
+              <span class="mail-dot"></span>
+              <span class="mail-dot"></span>
+              <span class="mail-dot"></span>
+              <span class="mail-title">KoxMail</span>
+            </div>
             <div class="mail-body">
-              <p>安全加密传输</p>
-              <p>AI 智能分类</p>
-              <p>全球同步</p>
+              <div class="mail-item">
+                <span class="mail-icon">📧</span>
+                <span class="mail-text">安全加密传输</span>
+              </div>
+              <div class="mail-item">
+                <span class="mail-icon">🤖</span>
+                <span class="mail-text">AI 智能分类</span>
+              </div>
+              <div class="mail-item">
+                <span class="mail-icon">☁️</span>
+                <span class="mail-text">全球实时同步</span>
+              </div>
             </div>
           </div>
         </div>
@@ -121,20 +157,132 @@
 
     <section class="features section" id="features">
       <div class="container">
-        <h2>核心优势</h2>
+        <div class="section-header">
+          <h2>核心优势</h2>
+          <p class="lead">为什么选择 KoxMail？</p>
+        </div>
         <div class="cards-3">
           <article class="card feature-card">
+            <div class="feature-icon">⚡</div>
             <h3>极速收发</h3>
-            <p>全球节点部署，毫秒级响应，告别延迟。</p>
+            <p>全球节点部署，毫秒级响应，告别延迟。智能路由选择最优路径。</p>
+            <ul class="feature-list">
+              <li>全球 20+ 数据中心</li>
+              <li>智能 DNS 解析</li>
+              <li>CDN 加速分发</li>
+            </ul>
           </article>
           <article class="card feature-card">
+            <div class="feature-icon">🔒</div>
             <h3>极致安全</h3>
             <p>多重端到端加密与智能 AI 反垃圾系统，守护您的绝对隐私。</p>
+            <ul class="feature-list">
+              <li>AES-256 加密</li>
+              <li>AI 反钓鱼检测</li>
+              <li>双重验证支持</li>
+            </ul>
           </article>
           <article class="card feature-card">
+            <div class="feature-icon">☁️</div>
             <h3>海量存储</h3>
             <p>无限容量扩展，重要文件与历史邮件永久保存。</p>
+            <ul class="feature-list">
+              <li>基础版 5GB</li>
+              <li>专业版无限容量</li>
+              <li>智能压缩优化</li>
+            </ul>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works section alt-bg">
+      <div class="container">
+        <div class="section-header">
+          <h2>如何工作</h2>
+          <p class="lead">简单三步，开启全新邮件体验</p>
+        </div>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>创建账户</h3>
+              <p>使用邮箱或手机号快速注册，完成基础设置。</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>配置客户端</h3>
+              <p>支持 IMAP/POP3/SMTP，一键配置所有设备。</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>开始使用</h3>
+              <p>享受智能分类、安全加密的全新邮件体验。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="more-features section">
+      <div class="container">
+        <div class="section-header">
+          <h2>更多功能</h2>
+          <p class="lead">强大功能，满足各种场景需求</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-row">
+            <div class="feature-box">
+              <div class="feature-icon">🤖</div>
+              <div class="feature-info">
+                <h4>AI 智能分类</h4>
+                <p>自动识别邮件类型，智能分类归档，让收件箱井井有条。</p>
+              </div>
+            </div>
+            <div class="feature-box">
+              <div class="feature-icon">📱</div>
+              <div class="feature-info">
+                <h4>全平台同步</h4>
+                <p>支持 iOS、Android、macOS、Windows，随时随地同步访问。</p>
+              </div>
+            </div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-box">
+              <div class="feature-icon">📎</div>
+              <div class="feature-info">
+                <h4>超大附件</h4>
+                <p>支持最大 5GB 附件，轻松分享大型文件和高清视频。</p>
+              </div>
+            </div>
+            <div class="feature-box">
+              <div class="feature-icon">🔄</div>
+              <div class="feature-info">
+                <h4>邮件撤回</h4>
+                <p>发送后后悔？支持撤回已发送邮件，避免尴尬。</p>
+              </div>
+            </div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-box">
+              <div class="feature-icon">🔔</div>
+              <div class="feature-info">
+                <h4>智能提醒</h4>
+                <p>重要邮件智能提醒，不错过任何关键信息。</p>
+              </div>
+            </div>
+            <div class="feature-box">
+              <div class="feature-icon">📊</div>
+              <div class="feature-info">
+                <h4>邮件分析</h4>
+                <p>查看邮件统计报告，了解收发趋势和效率分析。</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -192,14 +340,63 @@
       </div>
     </section>
 
+    <section class="security-features section alt-bg">
+      <div class="container">
+        <div class="section-header">
+          <h2>安全保障</h2>
+          <p class="lead">多重防护，全方位守护您的数据安全</p>
+        </div>
+        <div class="security-grid">
+          <div class="security-card">
+            <div class="security-icon">🔐</div>
+            <h3>端到端加密</h3>
+            <p>采用 AES-256 加密算法，只有您能解密自己的邮件内容。</p>
+          </div>
+          <div class="security-card">
+            <div class="security-icon">🛡️</div>
+            <h3>AI 反钓鱼</h3>
+            <p>智能识别钓鱼邮件，自动拦截恶意链接和附件。</p>
+          </div>
+          <div class="security-card">
+            <div class="security-icon">🔑</div>
+            <h3>多重验证</h3>
+            <p>支持 TOTP、短信、安全密钥等多种验证方式。</p>
+          </div>
+          <div class="security-card">
+            <div class="security-icon">🗑️</div>
+            <h3>无痕删除</h3>
+            <p>彻底删除邮件数据，无法被恢复或追踪。</p>
+          </div>
+          <div class="security-card">
+            <div class="security-icon">🔍</div>
+            <h3>合规审计</h3>
+            <p>符合 ISO 27001、GDPR 等国际安全标准。</p>
+          </div>
+          <div class="security-card">
+            <div class="security-icon">📋</div>
+            <h3>访问日志</h3>
+            <p>完整记录所有账户访问行为，随时查看登录历史。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="pricing section" id="pricing">
       <div class="container">
-        <h2>选择您的方案</h2>
-        <p class="lead">灵活的定价方案，满足不同需求</p>
+        <div class="section-header">
+          <h2>选择您的方案</h2>
+          <p class="lead">灵活的定价方案，满足不同需求</p>
+        </div>
+        
+        <div class="pricing-toggle">
+          <button class="toggle-btn active" data-period="monthly">月付</button>
+          <button class="toggle-btn" data-period="yearly">年付 <span class="save-badge">省20%</span></button>
+        </div>
         
         <div class="pricing-grid-apple">
           <div class="option-card" id="plan-basic">
             <div class="option-content">
+              <div class="option-badge">免费</div>
               <div class="option-title">基础免费版</div>
               <div class="option-desc">适合个人日常使用</div>
             </div>
@@ -208,14 +405,20 @@
           
           <div class="option-card selected" id="plan-pro">
             <div class="option-content">
+              <div class="option-badge recommended">推荐</div>
               <div class="option-title">专业个人版</div>
               <div class="option-desc">适合专业人士与小型团队</div>
             </div>
-            <div class="option-price">$4.99<span>/月</span></div>
+            <div class="option-price">
+              <span class="price-amount">$4.99</span>
+              <span class="price-unit">/月</span>
+              <span class="price-yearly" hidden>$47.88/年</span>
+            </div>
           </div>
           
           <div class="option-card" id="plan-enterprise">
             <div class="option-content">
+              <div class="option-badge enterprise">企业</div>
               <div class="option-title">企业定制版</div>
               <div class="option-desc">适合中大型企业</div>
             </div>
@@ -326,6 +529,57 @@
       </div>
     </section>
 
+    <section class="blog-preview section" id="blog">
+      <div class="container">
+        <div class="section-header">
+          <h2>最新动态</h2>
+          <p class="lead">了解我们的最新产品更新和行业资讯</p>
+          <a class="link-underline" href="blog.html">查看全部文章</a>
+        </div>
+        <div class="blog-grid">
+          <article class="blog-card">
+            <div class="blog-image">
+              <div class="skeleton" style="width: 100%; height: 180px;"></div>
+            </div>
+            <div class="blog-content">
+              <span class="badge">产品更新</span>
+              <h3>全新 AI 智能助手上线，让邮件处理更高效</h3>
+              <p>我们推出了全新的 AI 智能助手功能，可以自动帮您分类邮件、撰写回复草稿、甚至预测您可能感兴趣的邮件。</p>
+              <div class="blog-meta">
+                <span>2026年5月</span>
+              </div>
+            </div>
+          </article>
+          <article class="blog-card">
+            <div class="blog-image">
+              <div class="skeleton" style="width: 100%; height: 180px;"></div>
+            </div>
+            <div class="blog-content">
+              <span class="badge">安全公告</span>
+              <h3>我们如何保护您的数据安全</h3>
+              <p>了解 KoxMail 的多层次安全架构，从数据加密到访问控制，全方位保护您的邮件隐私。</p>
+              <div class="blog-meta">
+                <span>2026年4月</span>
+              </div>
+            </div>
+          </article>
+          <article class="blog-card">
+            <div class="blog-image">
+              <div class="skeleton" style="width: 100%; height: 180px;"></div>
+            </div>
+            <div class="blog-content">
+              <span class="badge">使用技巧</span>
+              <h3>10个提高邮件效率的实用技巧</h3>
+              <p>掌握这些技巧，让您的邮件处理效率提升 50%。从快捷键到筛选规则，全面提升您的工作效率。</p>
+              <div class="blog-meta">
+                <span>2026年3月</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="contact section" id="contact">
       <div class="container grid-2">
         <div class="contact-info">
@@ -377,6 +631,19 @@
         <a class="btn btn-accent" href="register.html">立即开启免费体验</a>
       </div>
     </section>
+
+    <div class="floating-actions" id="floatingActions">
+      <button class="float-btn" id="scrollTopBtn" title="返回顶部" aria-label="返回顶部">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 5v14M5 12l7-7 7 7"/>
+        </svg>
+      </button>
+      <button class="float-btn" id="darkModeBtn" title="切换主题" aria-label="切换主题">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </div>
   </main>
 
   <footer class="site-footer">
