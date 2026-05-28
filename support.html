@@ -10,34 +10,77 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header is-scrolled" id="siteHeader"><div class="container header-inner"><a class="brand" href="index.html"><span class="brand-mark">K</span><span class="brand-text">KoxMail</span></a><button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="打开导航"><span></span><span></span><span></span></button><nav class="nav" id="mainNav"><a href="index.html#home">首页</a><a href="index.html#faq">常见问题</a><a href="index.html#contact">联系我们</a></nav><div class="header-actions"><a class="btn btn-ghost" href="login.html">登录</a><a class="btn btn-accent" href="register.html">免费注册</a><button class="theme-toggle" id="themeToggle">🌓</button></div></div></header>
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">K</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="打开导航"><span></span><span></span><span></span></button>
+      <nav class="nav" id="mainNav">
+        <a href="index.html#home">首页</a>
+        <a href="index.html#faq">常见问题</a>
+        <a href="index.html#contact">联系我们</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="login.html">登录</a>
+        <a class="btn btn-accent" href="register.html">免费注册</a>
+        <button class="theme-toggle" id="themeToggle">🌓</button>
+      </div>
+    </div>
+  </header>
   <main class="subpage-main">
-    <section class="section sub-hero"><div class="container"><p class="breadcrumb"><a href="index.html">首页</a> / 技术支持</p><h1>技术支持中心</h1><p class="lead">账号、安全、客户端、订阅问题都可以在这里快速得到帮助。</p></div></section>
-    <section class="section-sm">
-      <div class="container sub-grid">
-        <article class="card">
-          <h2>常见支持主题</h2>
-          <ul class="doc-list">
-            <li>账号找回与密码重置</li>
-            <li>IMAP/SMTP 客户端接入</li>
-            <li>双重验证 (2FA) 设置</li>
-            <li>付费开票与账单问题</li>
-          </ul>
-          <a class="btn btn-outline" href="index.html#faq">查看 FAQ</a>
-        </article>
-        <article class="card">
-          <h2>提交工单</h2>
-          <form class="simple-form" action="index.html" method="get">
-            <div class="field"><label for="supEmail">联系邮箱</label><input id="supEmail" type="email" required></div>
-            <div class="field"><label for="supType">问题类型</label><select id="supType"><option>账号问题</option><option>客户端配置</option><option>安全与风控</option><option>支付订阅</option></select></div>
-            <div class="field"><label for="supDetail">问题详情</label><textarea id="supDetail" rows="4" required></textarea></div>
-            <button class="btn btn-accent full" type="submit">提交并获取支持</button>
-          </form>
-        </article>
+    <section class="section">
+      <div class="container">
+        <div class="page-header">
+          <h1>技术支持中心</h1>
+          <p class="lead">账号、安全、客户端、订阅问题都可以在这里快速得到帮助</p>
+        </div>
+        <div class="support-box">
+          <div class="support-topics">
+            <h2>常见支持主题</h2>
+            <ul class="topic-list">
+              <li><a href="#faq">账号找回与密码重置</a></li>
+              <li><a href="#faq">IMAP/SMTP 客户端接入</a></li>
+              <li><a href="#faq">双重验证 (2FA) 设置</a></li>
+              <li><a href="#faq">付费开票与账单问题</a></li>
+            </ul>
+            <a class="btn btn-outline" href="index.html#faq">查看完整 FAQ</a>
+          </div>
+          <div class="support-form">
+            <h2>提交工单</h2>
+            <form class="auth-form" action="index.html" method="get">
+              <div class="field">
+                <label for="supEmail">联系邮箱</label>
+                <input id="supEmail" type="email" placeholder="name@example.com" required>
+              </div>
+              <div class="field">
+                <label for="supType">问题类型</label>
+                <select id="supType">
+                  <option>账号问题</option>
+                  <option>客户端配置</option>
+                  <option>安全与风控</option>
+                  <option>支付订阅</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="supDetail">问题详情</label>
+                <textarea id="supDetail" rows="4" placeholder="请详细描述您遇到的问题..." required></textarea>
+              </div>
+              <button class="btn btn-accent full" type="submit">提交并获取支持</button>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
   </main>
-  <footer class="site-footer"><div class="container footer-bottom"><p>© 2026 KoxMail</p><div class="footer-links"><a href="privacy.html">隐私政策</a><a href="terms.html">服务条款</a><a href="support.html">联系支持</a></div></div></footer>
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <p>© 2026 KoxMail</p>
+      <div class="footer-links">
+        <a href="privacy.html">隐私政策</a>
+        <a href="terms.html">服务条款</a>
+        <a href="support.html">联系支持</a>
+      </div>
+    </div>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>

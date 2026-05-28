@@ -10,32 +10,72 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header is-scrolled" id="siteHeader"><div class="container header-inner"><a class="brand" href="index.html"><span class="brand-mark">K</span><span class="brand-text">KoxMail</span></a><button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="打开导航"><span></span><span></span><span></span></button><nav class="nav" id="mainNav"><a href="index.html#home">首页</a><a href="index.html#features">功能</a><a href="index.html#pricing">价格</a><a href="index.html#contact">联系我们</a></nav><div class="header-actions"><a class="btn btn-ghost" href="login.html">登录</a><a class="btn btn-accent" href="register.html">免费注册</a><button class="theme-toggle" id="themeToggle">🌓</button></div></div></header>
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">K</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="打开导航"><span></span><span></span><span></span></button>
+      <nav class="nav" id="mainNav">
+        <a href="index.html#home">首页</a>
+        <a href="index.html#features">功能</a>
+        <a href="index.html#pricing">价格</a>
+        <a href="index.html#contact">联系我们</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="login.html">登录</a>
+        <a class="btn btn-accent" href="register.html">免费注册</a>
+        <button class="theme-toggle" id="themeToggle">🌓</button>
+      </div>
+    </div>
+  </header>
   <main class="subpage-main">
-    <section class="section sub-hero"><div class="container"><p class="breadcrumb"><a href="index.html">首页</a> / 企业商务</p><h1>企业定制版咨询</h1><p class="lead">专属安全网关、日志审计、私有云方案与 1 对 1 技术专家支持。</p></div></section>
-    <section class="section-sm">
-      <div class="container sub-grid">
-        <article class="card">
-          <h2>企业能力清单</h2>
-          <ul class="doc-list">
-            <li>独享私有云存储与访问策略定制。</li>
-            <li>组织级审计日志与合规报告导出。</li>
-            <li>企业 SSO 与权限分级管理。</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h2>提交商务需求</h2>
-          <form class="simple-form" action="support.html" method="get">
-            <div class="field"><label for="bizCompany">公司名称</label><input id="bizCompany" required></div>
-            <div class="field"><label for="bizContact">联系人邮箱</label><input id="bizContact" type="email" required></div>
-            <div class="field"><label for="bizNeed">需求描述</label><textarea id="bizNeed" rows="4" required></textarea></div>
-            <button class="btn btn-accent full" type="submit">提交咨询</button>
-          </form>
-        </article>
+    <section class="section">
+      <div class="container">
+        <div class="page-header">
+          <h1>企业定制版咨询</h1>
+          <p class="lead">专属安全网关、日志审计、私有云方案与 1 对 1 技术专家支持</p>
+        </div>
+        <div class="business-box">
+          <div class="business-info">
+            <h2>企业能力清单</h2>
+            <ul class="feature-list">
+              <li>独享私有云存储与访问策略定制</li>
+              <li>组织级审计日志与合规报告导出</li>
+              <li>企业 SSO 与权限分级管理</li>
+              <li>专属客户经理与技术专家支持</li>
+            </ul>
+          </div>
+          <div class="business-form">
+            <h2>提交商务需求</h2>
+            <form class="auth-form" action="support.html" method="get">
+              <div class="field">
+                <label for="bizCompany">公司名称</label>
+                <input id="bizCompany" type="text" placeholder="请输入公司名称" required>
+              </div>
+              <div class="field">
+                <label for="bizContact">联系人邮箱</label>
+                <input id="bizContact" type="email" placeholder="name@company.com" required>
+              </div>
+              <div class="field">
+                <label for="bizNeed">需求描述</label>
+                <textarea id="bizNeed" rows="4" placeholder="请简要描述您的业务需求..." required></textarea>
+              </div>
+              <button class="btn btn-accent full" type="submit">提交咨询</button>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
   </main>
-  <footer class="site-footer"><div class="container footer-bottom"><p>© 2026 KoxMail</p><div class="footer-links"><a href="privacy.html">隐私政策</a><a href="terms.html">服务条款</a><a href="support.html">联系支持</a></div></div></footer>
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <p>© 2026 KoxMail</p>
+      <div class="footer-links">
+        <a href="privacy.html">隐私政策</a>
+        <a href="terms.html">服务条款</a>
+        <a href="support.html">联系支持</a>
+      </div>
+    </div>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>
