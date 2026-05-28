@@ -33,9 +33,11 @@
 
   setupAccordion();
   setupFaqSearch();
+  setupFaqTagFilter();
   setupContactForm();
   setupFadeIn();
   setupSectionTransitions();
+  setupStatCounters();
 
   function applyTheme(theme) {
     root.dataset.theme = theme;
@@ -102,6 +104,42 @@
       });
 
       emptyState.hidden = visibleCount !== 0;
+    });
+  }
+
+  function setupFaqTagFilter() {
+    const faqTags = document.getElementById("faqTags");
+    if (!faqTags) return;
+
+    const tagBtns = faqTags.querySelectorAll(".tag-btn");
+    const accordion = document.getElementById("faqAccordion");
+    const emptyState = document.getElementById("faqEmptyState");
+    const searchInput = document.getElementById("faqSearch");
+
+    tagBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        tagBtns.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const filter = btn.dataset.filter;
+        const items = accordion?.querySelectorAll(".accordion-item") || [];
+        let visibleCount = 0;
+
+        items.forEach((item) => {
+          const category = item.dataset.category;
+          const shouldShow = filter === "all" || category === filter;
+          item.hidden = !shouldShow;
+          if (shouldShow) visibleCount += 1;
+        });
+
+        if (emptyState) {
+          emptyState.hidden = visibleCount !== 0;
+        }
+
+        if (searchInput instanceof HTMLInputElement) {
+          searchInput.value = "";
+        }
+      });
     });
   }
 
@@ -212,6 +250,61 @@
     );
 
     revealTargets.forEach((el) => revealObserver.observe(el));
+  }
+
+  function setupStatCounters() {
+    const statNumbers = document.querySelectorAll(".stat-number");
+    if (!statNumbers.length) return;
+
+    const animateCounter = (el) => {
+      const target = parseInt(el.dataset.target || "0", 10);
+      const duration = 2000;
+      const startTime = performance.now();
+      const startValue = 0;
+
+      const formatNumber = (num) => {
+        if (num >= 1000000000) {
+          return (num / 1000000000).toFixed(1) + "B";
+        }
+        if (num >= 1000000) {
+          return (num / 1000000).toFixed(1) + "M";
+        }
+        if (num >= 1000) {
+          return (num / 1000).toFixed(1) + "K";
+        }
+        return num.toString();
+      };
+
+      const updateCounter = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easeOut = 1 - Math.pow(1 - progress, 3);
+        const currentValue = Math.floor(startValue + (target - startValue) * easeOut);
+
+        el.textContent = formatNumber(currentValue);
+
+        if (progress < 1) {
+          requestAnimationFrame(updateCounter);
+        } else {
+          el.textContent = formatNumber(target);
+        }
+      };
+
+      requestAnimationFrame(updateCounter);
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    statNumbers.forEach((el) => observer.observe(el));
   }
 
   function wait(ms) {
