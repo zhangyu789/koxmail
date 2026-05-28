@@ -41,6 +41,7 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
+  animation: pageFadeIn 0.7s ease both;
 }
 
 a {
@@ -55,6 +56,8 @@ a {
 
 .section {
   padding: 88px 0;
+  position: relative;
+  overflow: clip;
 }
 
 .section-sm {
@@ -149,13 +152,14 @@ h3 {
   position: sticky;
   top: 0;
   z-index: 30;
-  transition: background 0.25s ease, box-shadow 0.25s ease, backdrop-filter 0.25s ease;
+  transition: background 0.35s ease, box-shadow 0.35s ease, backdrop-filter 0.35s ease, transform 0.35s ease;
 }
 
 .site-header.is-scrolled {
   background: var(--header-bg);
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow-sm);
+  transform: translateY(0);
 }
 
 .header-inner {
@@ -192,6 +196,7 @@ h3 {
   position: relative;
   color: var(--text-muted);
   font-weight: 500;
+  transition: color 0.25s ease;
 }
 
 .nav a::after {
@@ -228,11 +233,12 @@ h3 {
   padding: 0 16px;
   font-weight: 700;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.28s ease, background 0.25s ease, filter 0.25s ease;
 }
 
 .btn:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px) scale(1.01);
+  filter: brightness(1.02);
 }
 
 .btn-ghost {
@@ -260,6 +266,12 @@ h3 {
   background: var(--surface);
   color: var(--text);
   cursor: pointer;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px) rotate(-8deg);
+  box-shadow: var(--shadow-sm);
 }
 
 .hero-form {
@@ -279,7 +291,18 @@ input, textarea {
   outline: none;
 }
 
-input:focus, textarea:focus {
+select {
+  width: 100%;
+  color: var(--text);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 12px 14px;
+  min-height: 44px;
+  outline: none;
+}
+
+input:focus, textarea:focus, select:focus {
   border-color: var(--primary);
   box-shadow: 0 0 0 4px rgba(0, 86, 179, 0.15);
 }
@@ -289,6 +312,7 @@ input:focus, textarea:focus {
   align-content: center;
   justify-items: center;
   position: relative;
+  perspective: 1000px;
 }
 
 .mock-mail {
@@ -297,6 +321,8 @@ input:focus, textarea:focus {
   overflow: hidden;
   box-shadow: var(--shadow-md);
   border: 1px solid var(--border);
+  animation: floatY 4.8s ease-in-out infinite;
+  transform-style: preserve-3d;
 }
 
 .mail-top {
@@ -323,6 +349,7 @@ input:focus, textarea:focus {
   background: var(--surface);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-sm);
+  animation: pulseShield 2.8s ease-in-out infinite;
 }
 
 .trust {
@@ -348,10 +375,16 @@ input:focus, textarea:focus {
   background: var(--surface);
   padding: 10px 14px;
   font-weight: 700;
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
+}
+
+.badge:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
 }
 
 .feature-card {
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
 }
 
 .feature-card:hover {
@@ -409,6 +442,12 @@ input:focus, textarea:focus {
   background: var(--surface);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-sm);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, border-color 0.25s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
 }
 
 .price-card .price {
@@ -431,6 +470,7 @@ input:focus, textarea:focus {
   transform: scale(1.05);
   border-color: var(--primary);
   position: relative;
+  animation: glowCard 3.2s ease-in-out infinite;
 }
 
 .tag {
@@ -469,6 +509,12 @@ input:focus, textarea:focus {
   background: var(--surface);
   margin-bottom: 10px;
   overflow: hidden;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.accordion-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
 }
 
 .accordion-trigger {
@@ -507,7 +553,7 @@ input:focus, textarea:focus {
 }
 
 .icon {
-  transition: transform 0.2s ease;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .empty-state {
@@ -526,6 +572,8 @@ input:focus, textarea:focus {
   place-items: center;
   color: var(--text-muted);
   background: linear-gradient(140deg, #cbd5e1, #94a3b8);
+  background-size: 140% 140%;
+  animation: mapFlow 10s ease-in-out infinite;
 }
 
 .field {
@@ -585,6 +633,7 @@ input:focus, textarea:focus {
   border: 1px solid #22c55e55;
   background: #22c55e20;
   padding: 16px;
+  animation: successPop 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .cta-box {
@@ -594,6 +643,12 @@ input:focus, textarea:focus {
   border: 1px solid var(--border);
   box-shadow: var(--shadow-sm);
   padding: 28px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.cta-box:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
 
 .site-footer {
@@ -610,6 +665,12 @@ input:focus, textarea:focus {
   display: block;
   color: #cbd5e1;
   margin-bottom: 6px;
+  transition: color 0.22s ease, transform 0.22s ease;
+}
+
+.site-footer a:hover {
+  color: #ffffff;
+  transform: translateX(2px);
 }
 
 .footer-bottom {
@@ -662,8 +723,98 @@ input:focus, textarea:focus {
   clip: rect(0 0 0 0);
 }
 
+.subpage-main {
+  min-height: calc(100vh - 210px);
+}
+
+.sub-hero {
+  background: linear-gradient(180deg, var(--bg-alt), transparent);
+}
+
+.breadcrumb {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.breadcrumb a {
+  color: var(--primary);
+}
+
+.sub-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+
+.sub-grid > *:first-child {
+  grid-column: span 7;
+}
+
+.sub-grid > *:last-child {
+  grid-column: span 5;
+}
+
+.simple-form {
+  display: grid;
+  gap: 6px;
+}
+
+.muted-line {
+  color: var(--text-muted);
+}
+
+.doc-wrap {
+  max-width: 900px;
+}
+
+.doc-wrap h2 {
+  margin-top: 26px;
+  margin-bottom: 8px;
+}
+
+.doc-wrap h2:first-child {
+  margin-top: 0;
+}
+
+.doc-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.doc-list li {
+  margin-bottom: 8px;
+}
+
 .fade-in {
   animation: fadeInUp 0.5s ease both;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px) scale(0.985);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: transform, opacity;
+}
+
+.reveal.reveal-in {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.section-glow::before {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 86, 179, 0.15), transparent 68%);
+  top: -120px;
+  right: -80px;
+  pointer-events: none;
+  animation: glowDrift 7s ease-in-out infinite;
 }
 
 @keyframes spin {
@@ -678,6 +829,83 @@ input:focus, textarea:focus {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes floatY {
+  0%, 100% {
+    transform: translateY(0px) rotateX(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotateX(1.5deg);
+  }
+}
+
+@keyframes pulseShield {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: var(--shadow-sm);
+  }
+  50% {
+    transform: scale(1.06);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+@keyframes glowCard {
+  0%, 100% {
+    box-shadow: 0 14px 34px rgba(0, 86, 179, 0.18);
+  }
+  50% {
+    box-shadow: 0 18px 42px rgba(0, 86, 179, 0.3);
+  }
+}
+
+@keyframes mapFlow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes successPop {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes glowDrift {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-12px, 10px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition-duration: 1ms !important;
+    transition-delay: 0ms !important;
   }
 }
 
@@ -762,5 +990,9 @@ input:focus, textarea:focus {
   .btn,
   .theme-toggle {
     width: 100%;
+  }
+
+  .sub-grid > * {
+    grid-column: 1 / -1;
   }
 }

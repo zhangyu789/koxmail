@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KoxMail 免费注册</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header is-scrolled" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">K</span><span class="brand-text">KoxMail</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="打开导航"><span></span><span></span><span></span></button>
+      <nav class="nav" id="mainNav" aria-label="主导航">
+        <a href="index.html#home">首页</a><a href="index.html#features">功能</a><a href="index.html#pricing">价格</a><a href="index.html#about">关于我们</a><a href="index.html#faq">常见问题</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="login.html">登录</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="切换暗黑模式">🌓</button>
+      </div>
+    </div>
+  </header>
+  <main class="subpage-main">
+    <section class="section sub-hero">
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html">首页</a> / 免费注册</p>
+        <h1>30 秒开启 KoxMail</h1>
+        <p class="lead">创建账户后即可体验银行级加密邮件、跨端同步与大附件传输。</p>
+      </div>
+    </section>
+    <section class="section-sm">
+      <div class="container sub-grid">
+        <article class="card">
+          <h2>创建新账户</h2>
+          <form class="simple-form" action="login.html" method="get">
+            <div class="field"><label for="regName">姓名</label><input id="regName" type="text" required></div>
+            <div class="field"><label for="regEmail">电子邮箱</label><input id="regEmail" type="email" required></div>
+            <div class="field"><label for="regPassword">设置密码</label><input id="regPassword" type="password" required></div>
+            <div class="field"><label for="regPlan">默认套餐</label><select id="regPlan"><option>基础免费版</option><option>专业个人版</option><option>企业定制版</option></select></div>
+            <button class="btn btn-accent full" type="submit">完成注册</button>
+          </form>
+        </article>
+        <article class="card">
+          <h3>注册后你将获得</h3>
+          <ul class="doc-list">
+            <li>5GB 免费存储与基础反垃圾服务。</li>
+            <li>Web、iOS、Android 多端同步。</li>
+            <li>可随时升级至专业版或企业版。</li>
+          </ul>
+          <a class="btn btn-outline" href="subscribe.html">查看专业版权益</a>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-bottom"><p>© 2026 KoxMail</p><div class="footer-links"><a href="privacy.html">隐私政策</a><a href="terms.html">服务条款</a><a href="support.html">联系支持</a></div></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>

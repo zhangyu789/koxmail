@@ -35,6 +35,7 @@
   setupFaqSearch();
   setupContactForm();
   setupFadeIn();
+  setupSectionTransitions();
 
   function applyTheme(theme) {
     root.dataset.theme = theme;
@@ -124,6 +125,9 @@
       form.hidden = true;
       success.hidden = false;
       submitBtn.classList.remove("is-loading");
+      window.setTimeout(() => {
+        window.location.href = "support.html?from=contact";
+      }, 900);
     });
 
     form.querySelectorAll("input, textarea").forEach((el) => {
@@ -165,6 +169,7 @@
   }
 
   function setupFadeIn() {
+    if (!("IntersectionObserver" in window)) return;
     const targets = document.querySelectorAll(".card, .price-card");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -175,6 +180,38 @@
     }, { threshold: 0.12 });
 
     targets.forEach((el) => observer.observe(el));
+  }
+
+  function setupSectionTransitions() {
+    if (!("IntersectionObserver" in window)) return;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reducedMotion) return;
+
+    const sections = document.querySelectorAll("section");
+    sections.forEach((section) => section.classList.add("section-glow"));
+
+    const revealTargets = document.querySelectorAll(
+      ".hero-content, .hero-art, .badge, .feature-card, .quote-card, .z-flow .card, .cards-4 .card, .price-card, .accordion-item, .contact-info, #contact .card, .cta-box"
+    );
+
+    revealTargets.forEach((el, index) => {
+      el.classList.add("reveal");
+      const delay = (index % 6) * 70;
+      el.style.setProperty("--reveal-delay", `${delay}ms`);
+    });
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("reveal-in");
+          revealObserver.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.16, rootMargin: "0px 0px -8% 0px" }
+    );
+
+    revealTargets.forEach((el) => revealObserver.observe(el));
   }
 
   function wait(ms) {
