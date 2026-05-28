@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KoxMail - 安全高效的云端邮箱</title>
+  <meta name="description" content="KoxMail 为您提供银行级安全加密、极速稳定的云端邮箱服务。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="KoxMail 首页">
+        <span class="brand-mark">K</span>
+        <span class="brand-text">KoxMail</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="打开导航">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="mainNav" aria-label="主导航">
+        <a href="#home">首页</a>
+        <a href="#features">功能</a>
+        <a href="#pricing">价格</a>
+        <a href="#about">关于我们</a>
+        <a href="#faq">常见问题</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-ghost">登录</button>
+        <button class="btn btn-accent">免费注册</button>
+        <button class="theme-toggle" id="themeToggle" aria-label="切换暗黑模式">🌓</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="container grid-2">
+        <div class="hero-content">
+          <p class="eyebrow">安全 · 高效 · 现代</p>
+          <h1>开启高效沟通新时代</h1>
+          <p class="lead">KoxMail 为您提供银行级安全加密、极速稳定的云端邮箱服务，让每一次沟通都更有价值。</p>
+          <form class="hero-form" action="#" novalidate>
+            <label class="sr-only" for="heroEmail">邮箱地址</label>
+            <input id="heroEmail" type="email" placeholder="请输入您的电子邮箱..." aria-label="请输入您的电子邮箱">
+            <button type="submit" class="btn btn-accent">立即免费注册</button>
+          </form>
+          <a class="link-arrow" href="#features">了解更多功能 →</a>
+        </div>
+        <div class="hero-art">
+          <div class="mock-mail">
+            <div class="mail-top">KoxMail Secure Cloud</div>
+            <div class="mail-body">
+              <p>Encrypted message delivery</p>
+              <p>AI anti-spam activated</p>
+              <p>Global sync ready</p>
+            </div>
+          </div>
+          <div class="shield">🔒</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust section-sm">
+      <div class="container">
+        <p class="trust-text">银行级安全架构，通过国际权威合规认证</p>
+        <div class="badges">
+          <div class="badge">ISO/IEC 27001</div>
+          <div class="badge">GDPR</div>
+          <div class="badge">SSL TLS</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features section" id="features">
+      <div class="container">
+        <h2>核心优势</h2>
+        <div class="cards-3">
+          <article class="card feature-card">
+            <h3>极速收发</h3>
+            <p>全球节点部署，毫秒级响应，告别延迟。</p>
+          </article>
+          <article class="card feature-card">
+            <h3>极致安全</h3>
+            <p>多重端到端加密与智能 AI 反垃圾系统，守护您的绝对隐私。</p>
+          </article>
+          <article class="card feature-card">
+            <h3>海量存储</h3>
+            <p>无限容量扩展，重要文件与历史邮件永久保存。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials section-sm">
+      <div class="container">
+        <h2>用户证言</h2>
+        <div class="cards-3">
+          <article class="card quote-card">
+            <p>"KoxMail 的多端同步和超大附件功能完全解决了我们跨国团队的协作痛点。"</p>
+            <div class="person">陈颖 · 运营总监 · NeoLink</div>
+          </article>
+          <article class="card quote-card">
+            <p>"安全能力非常扎实，尤其是反钓鱼识别，给我们省下很多风险成本。"</p>
+            <div class="person">David Li · IT Manager · Vertex</div>
+          </article>
+          <article class="card quote-card">
+            <p>"迁移过程平滑，团队几乎没有学习成本，效率直接提升。"</p>
+            <div class="person">王哲 · 产品负责人 · GigaTech</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section alt-bg" id="about">
+      <div class="container">
+        <h2>关于我们</h2>
+        <div class="z-flow">
+          <div class="card">
+            <h3>连接世界的每一次心跳</h3>
+            <p>KoxMail 诞生于对高效沟通的渴望。在信息爆炸的时代，我们致力于剔除繁杂，还原沟通的本质。从创立之初，我们就坚持“用户隐私至上”的原则，打造了一款真正属于未来的邮箱产品。</p>
+          </div>
+          <div class="card timeline">
+            <h3>发展里程碑</h3>
+            <ul>
+              <li><strong>2024：</strong>核心端到端加密算法研发成功。</li>
+              <li><strong>2025：</strong>KoxMail 1.0 正式上线，全球用户突破百万。</li>
+              <li><strong>2026：</strong>推出智能通信生态，实现全端数据毫秒级同步。</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>使命与愿景</h3>
+            <p><strong>使命：</strong>让全球用户享受无缝、安全的连接体验。</p>
+            <p><strong>愿景：</strong>成为全球最受信赖的智能通信平台。</p>
+          </div>
+          <div class="card team">
+            <h3>核心团队</h3>
+            <div class="team-grid">
+              <div class="member"><span class="avatar"></span><p>CEO · Lena</p></div>
+              <div class="member"><span class="avatar"></span><p>CTO · Kevin</p></div>
+              <div class="member"><span class="avatar"></span><p>PM · Ruby</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing section" id="pricing">
+      <div class="container">
+        <h2>功能详情与定价</h2>
+        <div class="cards-4">
+          <article class="card">
+            <h3>智能管理</h3>
+            <p>AI 自动分类邮件，智能标签系统，让收件箱井井有条。</p>
+          </article>
+          <article class="card">
+            <h3>多端同步</h3>
+            <p>完美适配 Web、iOS、Android 及桌面客户端，数据实时同步。</p>
+          </article>
+          <article class="card">
+            <h3>超大附件</h3>
+            <p>支持最高 5GB 的超大附件闪电发送，无需本地压缩。</p>
+          </article>
+          <article class="card">
+            <h3>日历协同</h3>
+            <p>内置日程管理，邮件一键转任务，团队会议一键预约。</p>
+          </article>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card">
+            <h3>基础免费版</h3>
+            <p class="price">$0 <span>/ 永久免费</span></p>
+            <ul>
+              <li>5 GB 存储空间</li>
+              <li>附件上限 500 MB</li>
+              <li>基础反垃圾隔离</li>
+              <li>社区支持</li>
+            </ul>
+            <button class="btn btn-outline">免费开始</button>
+          </article>
+          <article class="price-card featured">
+            <p class="tag">POPULAR / 推荐</p>
+            <h3>专业个人版</h3>
+            <p class="price">$4.99 <span>/ 月</span></p>
+            <ul>
+              <li>无限容量扩展</li>
+              <li>附件上限 5 GB</li>
+              <li>端到端加密 + AI 防钓鱼</li>
+              <li>24/7 优先在线客服</li>
+            </ul>
+            <button class="btn btn-accent">立即订阅</button>
+          </article>
+          <article class="price-card">
+            <h3>企业定制版</h3>
+            <p class="price">联系商务</p>
+            <ul>
+              <li>独享私有云存储</li>
+              <li>无附件限制</li>
+              <li>专属安全网关 + 日志审计</li>
+              <li>1 对 1 技术专家</li>
+            </ul>
+            <button class="btn btn-outline">联系商务</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq section alt-bg" id="faq">
+      <div class="container">
+        <h2>常见问题</h2>
+        <div class="faq-top">
+          <input type="search" placeholder="请输入您遇到的问题..." aria-label="FAQ 搜索">
+          <div class="tags">
+            <span>账号找回</span>
+            <span>IMAP 设置</span>
+            <span>双重验证(2FA)</span>
+            <span>付费开票</span>
+          </div>
+        </div>
+        <div class="accordion" id="faqAccordion">
+          <article class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span>如何找回密码？</span><span class="icon">+</span>
+            </button>
+            <div class="accordion-panel">
+              <p>您可以通过登录页的“忘记密码”链接，通过注册时绑定的备用邮箱或安全手机号进行验证码重置。</p>
+            </div>
+          </article>
+          <article class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span>KoxMail 支持 POP3/IMAP 吗？</span><span class="icon">+</span>
+            </button>
+            <div class="accordion-panel">
+              <p>支持。您可以在 [设置]-[客户端授权] 中开启 IMAP/SMTP 服务，系统将为您生成专属的第三方客户端授权密码。</p>
+            </div>
+          </article>
+        </div>
+        <div class="empty-state" id="faqEmptyState" hidden>
+          <p>未找到相关结果，试试其他关键词。</p>
+          <button class="btn btn-outline">联系技术支持</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="container grid-2">
+        <div class="contact-info">
+          <h2>联系我们</h2>
+          <p><strong>公司地址：</strong>科技园区创新大道 88 号 Kox 大厦</p>
+          <p><strong>服务邮箱：</strong>support@koxmail.com</p>
+          <p><strong>客服热线：</strong>400-123-4567（工作日 9:00 - 18:00）</p>
+          <div class="map-placeholder" aria-label="地图占位图">Map Placeholder</div>
+        </div>
+        <div class="card">
+          <h3>在线反馈</h3>
+          <form id="contactForm" novalidate>
+            <div class="field">
+              <label for="name">姓名 *</label>
+              <input id="name" name="name" required>
+              <small class="error-msg"></small>
+            </div>
+            <div class="field">
+              <label for="email">电子邮箱 *</label>
+              <input id="email" name="email" type="email" required>
+              <small class="error-msg"></small>
+            </div>
+            <div class="field">
+              <label for="subject">主题</label>
+              <input id="subject" name="subject">
+              <small class="error-msg"></small>
+            </div>
+            <div class="field">
+              <label for="message">留言内容 *</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+              <small class="error-msg"></small>
+            </div>
+            <button class="btn btn-accent full" id="contactSubmit" type="submit">
+              <span class="btn-text">提交反馈</span>
+              <span class="spinner" aria-hidden="true"></span>
+            </button>
+          </form>
+          <div class="success-card" id="contactSuccess" hidden>
+            <h4>提交成功</h4>
+            <p>感谢您的反馈！我们的团队将在 24 小时内与您取得联系。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta section-sm">
+      <div class="container cta-box">
+        <h2>准备好升级您的沟通体验了吗？</h2>
+        <button class="btn btn-accent">立即开启免费体验</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>产品功能</h4>
+        <a href="#features">智能管理</a>
+        <a href="#features">多端同步</a>
+        <a href="#pricing">超大附件</a>
+      </div>
+      <div>
+        <h4>公司动态</h4>
+        <a href="#about">关于我们</a>
+        <a href="#about">里程碑</a>
+      </div>
+      <div>
+        <h4>安全与合规</h4>
+        <a href="#home">ISO 27001</a>
+        <a href="#home">GDPR</a>
+      </div>
+      <div>
+        <h4>技术支持</h4>
+        <a href="#faq">常见问题</a>
+        <a href="#contact">联系支持</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 KoxMail. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">隐私政策</a>
+        <a href="#">服务条款</a>
+        <a href="#" aria-label="微博">微博</a>
+        <a href="#" aria-label="微信公众号">微信</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
