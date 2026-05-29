@@ -250,7 +250,7 @@
     sections.forEach((section) => section.classList.add("section-glow"));
 
     const revealTargets = document.querySelectorAll(
-      ".hero-content, .hero-art, .badge, .feature-card, .quote-card, .z-flow .card, .cards-4 .card, .price-card, .accordion-item, .contact-info, #contact .card, .cta-box"
+      ".badge, .feature-card, .quote-card, .z-flow .card, .cards-4 .card, .price-card, .accordion-item, .contact-info, #contact .card, .cta-box"
     );
 
     revealTargets.forEach((el, index) => {
@@ -267,10 +267,27 @@
           revealObserver.unobserve(entry.target);
         });
       },
-      { threshold: 0.16, rootMargin: "0px 0px -8% 0px" }
+      { threshold: 0.08, rootMargin: "0px 0px -5% 0px" }
     );
 
-    revealTargets.forEach((el) => revealObserver.observe(el));
+    const markVisibleIfInView = (el) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.95 && rect.bottom > 0) {
+        el.classList.add("reveal-in");
+        revealObserver.unobserve(el);
+      }
+    };
+
+    revealTargets.forEach((el) => {
+      revealObserver.observe(el);
+      markVisibleIfInView(el);
+    });
+
+    window.addEventListener(
+      "load",
+      () => revealTargets.forEach(markVisibleIfInView),
+      { once: true }
+    );
   }
 
   function setupStatCounters() {

@@ -1,4 +1,6 @@
 :root {
+  --bg-gradient-start: transparent;
+  --bg-gradient-end: transparent;
   --primary: #0071e3;
   --primary-dark: #0077ed;
   --primary-light: #34c7ff;
@@ -1591,15 +1593,18 @@ input:-webkit-autofill {
   text-align: center;
   max-width: 600px;
   margin: 0 auto 40px;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s ease-out forwards;
+  animation: fadeInUp 0.8s ease-out both;
 }
 
 .hero-art {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.8s ease-out 0.3s forwards;
+  animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+.hero-content.reveal,
+.hero-art.reveal {
+  opacity: 1;
+  transform: none;
+  transition: none;
 }
 
 @keyframes fadeInUp {
