@@ -43,9 +43,25 @@
     root.dataset.theme = theme;
     if (themeToggle) {
       themeToggle.textContent = theme === "dark" ? "🌞" : "🌓";
-      themeToggle.setAttribute("aria-label", theme === "dark" ? "切换亮色模式" : "切换暗黑模式");
+      const i18n = window.KoxI18n;
+      const labelKey = theme === "dark" ? "theme.light" : "theme.dark";
+      themeToggle.setAttribute(
+        "aria-label",
+        i18n ? i18n.t(labelKey) : (theme === "dark" ? "Switch to light mode" : "Switch to dark mode")
+      );
     }
   }
+
+  document.addEventListener("koxmail:langchange", () => {
+    if (themeToggle && root.dataset.theme) {
+      applyTheme(root.dataset.theme);
+    }
+    document.querySelectorAll(".field.invalid .error-msg").forEach((errorEl) => {
+      const field = errorEl.closest(".field");
+      const input = field?.querySelector("input, textarea");
+      if (input) validateField(input);
+    });
+  });
 
   function setupAccordion() {
     const accordion = document.getElementById("faqAccordion");
@@ -157,7 +173,9 @@
       submitBtn.classList.add("is-loading");
       submitBtn.disabled = true;
       const text = submitBtn.querySelector(".btn-text");
-      if (text) text.textContent = "正在提交...";
+      if (text) {
+        text.textContent = window.KoxI18n ? window.KoxI18n.t("form.submitting") : "Submitting...";
+      }
 
       await wait(1200);
       form.hidden = true;
@@ -194,11 +212,14 @@
     const value = element.value.trim();
     const isRequired = element.hasAttribute("required");
 
+    const i18n = window.KoxI18n;
     if (isRequired && !value) {
-      errorMessage = "此字段为必填项";
+      errorMessage = i18n ? i18n.t("form.required") : "This field is required";
     } else if (element.getAttribute("type") === "email" && value) {
       const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailReg.test(value)) errorMessage = "请输入有效的邮箱地址";
+      if (!emailReg.test(value)) {
+        errorMessage = i18n ? i18n.t("form.emailInvalid") : "Please enter a valid email address";
+      }
     }
 
     field.classList.toggle("invalid", Boolean(errorMessage));

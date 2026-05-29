@@ -355,6 +355,26 @@ h3 {
   gap: 10px;
 }
 
+.lang-btn {
+  padding: 6px 12px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 980px;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  font-family: inherit;
+  line-height: 1.2;
+}
+
+.lang-btn:hover {
+  color: var(--text);
+  border-color: var(--text-subtle);
+  background: var(--surface-hover);
+}
+
 .btn {
   min-height: 36px;
   border-radius: 18px;
@@ -2529,6 +2549,11 @@ input:-webkit-autofill {
 
   .header-actions .btn-ghost {
     display: none;
+  }
+
+  .header-actions .lang-btn {
+    padding: 5px 10px;
+    font-size: 0.75rem;
   }
 
   .hero-form {

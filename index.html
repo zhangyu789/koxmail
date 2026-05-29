@@ -1,39 +1,40 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KoxMail - 安全高效的云端邮箱</title>
-  <meta name="description" content="KoxMail 为您提供银行级安全加密、极速稳定的云端邮箱服务。">
+  <title>KoxMail - Secure, Efficient Cloud Email</title>
+  <meta name="description" content="KoxMail delivers bank-grade encryption and fast, reliable cloud email." data-i18n-meta="meta.index.description">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="index">
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
-      <a class="brand" href="index.html#home" aria-label="KoxMail 首页">
+      <a class="brand" href="index.html#home" data-i18n-aria="brand.aria">
         <span class="brand-mark">K</span>
         <span class="brand-text">KoxMail</span>
       </a>
 
-      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="打开导航">
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" data-i18n-aria="nav.open">
         <span></span><span></span><span></span>
       </button>
 
-      <nav class="nav" id="mainNav" aria-label="主导航">
-        <a href="index.html#home">首页</a>
-        <a href="index.html#features">功能</a>
-        <a href="index.html#pricing">价格</a>
-        <a href="index.html#about">关于我们</a>
-        <a href="index.html#faq">常见问题</a>
-        <a href="index.html#blog">博客</a>
+      <nav class="nav" id="mainNav" data-i18n-aria="nav.main">
+        <a href="index.html#home" data-i18n="nav.home">Home</a>
+        <a href="index.html#features" data-i18n="nav.features">Features</a>
+        <a href="index.html#pricing" data-i18n="nav.pricing">Pricing</a>
+        <a href="index.html#about" data-i18n="nav.about">About</a>
+        <a href="index.html#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="index.html#blog" data-i18n="nav.blog">Blog</a>
       </nav>
 
       <div class="header-actions">
-        <a class="btn btn-ghost" href="login.html">登录</a>
-        <a class="btn btn-accent" href="register.html">免费注册</a>
+        <button type="button" class="lang-btn" id="langToggle" aria-label="Switch to Chinese">中文</button>
+        <a class="btn btn-ghost" href="login.html" data-i18n="common.login">Sign in</a>
+        <a class="btn btn-accent" href="register.html" data-i18n="common.register">Sign up free</a>
       </div>
     </div>
   </header>
@@ -42,39 +43,39 @@
     <section class="hero section" id="home">
       <div class="container">
         <div class="hero-content">
-          <p class="eyebrow">✦ 重新定义未来商务通讯 ✦</p>
-          <h1>掌控全球通信脉搏<br/>缔造企业安全传奇</h1>
-          <p class="lead">以军工级加密为基座 · 以光速同步为引擎 · 以AI智能为中枢<br/>专为追求极致的商业领袖而生</p>
+          <p class="eyebrow" data-i18n="index.hero.eyebrow">✦ Redefining business communication ✦</p>
+          <h1 data-i18n-html="index.hero.title">Master global communication<br/>Build enterprise-grade security</h1>
+          <p class="lead" data-i18n-html="index.hero.lead">Military-grade encryption · Lightning sync · AI at the core<br/>Built for leaders who demand excellence</p>
           <div class="hero-features">
-            <span class="hero-feature-tag">军事级加密</span>
-            <span class="hero-feature-tag">无限云端空间</span>
-            <span class="hero-feature-tag">AI 量子分类</span>
-            <span class="hero-feature-tag">全球光速节点</span>
-            <span class="hero-feature-tag">零泄露保障</span>
+            <span class="hero-feature-tag" data-i18n="index.hero.tag1">Military-grade encryption</span>
+            <span class="hero-feature-tag" data-i18n="index.hero.tag2">Unlimited cloud storage</span>
+            <span class="hero-feature-tag" data-i18n="index.hero.tag3">AI smart sorting</span>
+            <span class="hero-feature-tag" data-i18n="index.hero.tag4">Global edge network</span>
+            <span class="hero-feature-tag" data-i18n="index.hero.tag5">Zero-leak guarantee</span>
           </div>
           <div class="hero-actions">
             <a class="btn btn-accent btn-large" href="register.html">
-              尊享极致体验
+              <span data-i18n="index.hero.ctaPrimary">Start premium experience</span>
               <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </a>
-            <a class="btn btn-outline btn-large" href="#features">探索前沿科技</a>
+            <a class="btn btn-outline btn-large" href="#features" data-i18n="index.hero.ctaSecondary">Explore technology</a>
           </div>
           <div class="hero-stats">
             <div class="hero-stat">
-              <span class="hero-stat-value">1000万+</span>
-              <span class="hero-stat-label">全球企业领袖之选</span>
+              <span class="hero-stat-value" data-i18n="index.hero.stat1.value">10M+</span>
+              <span class="hero-stat-label" data-i18n="index.hero.stat1.label">Business leaders worldwide</span>
             </div>
             <div class="hero-stat-divider"></div>
             <div class="hero-stat">
-              <span class="hero-stat-value">99.999%</span>
-              <span class="hero-stat-label">五个九极致可用</span>
+              <span class="hero-stat-value" data-i18n="index.hero.stat2.value">99.999%</span>
+              <span class="hero-stat-label" data-i18n="index.hero.stat2.label">Five-nines availability</span>
             </div>
             <div class="hero-stat-divider"></div>
             <div class="hero-stat">
-              <span class="hero-stat-value">200+</span>
-              <span class="hero-stat-label">顶级企业信赖</span>
+              <span class="hero-stat-value" data-i18n="index.hero.stat3.value">200+</span>
+              <span class="hero-stat-label" data-i18n="index.hero.stat3.label">Enterprise customers</span>
             </div>
           </div>
         </div>
@@ -92,15 +93,15 @@
             <div class="mail-body">
               <div class="mail-item">
                 <span class="mail-icon">🔐</span>
-                <span class="mail-text">军事级端到端加密</span>
+                <span class="mail-text" data-i18n="index.mock.e2e">End-to-end encryption</span>
               </div>
               <div class="mail-item">
                 <span class="mail-icon">⚡</span>
-                <span class="mail-text">全球光速同步</span>
+                <span class="mail-text" data-i18n="index.mock.sync">Global sync</span>
               </div>
               <div class="mail-item">
                 <span class="mail-icon">🧠</span>
-                <span class="mail-text">AI 量子级智能</span>
+                <span class="mail-text" data-i18n="index.mock.ai">AI-powered intelligence</span>
               </div>
             </div>
           </div>
@@ -110,12 +111,12 @@
 
     <section class="trust section-sm">
       <div class="container">
-        <p class="trust-text">✦ 世界500强企业共同选择的安全标准 ✦</p>
+        <p class="trust-text" data-i18n="index.trust">✦ Security standards trusted by Fortune 500 companies ✦</p>
         <div class="badges">
           <div class="badge">ISO/IEC 27001</div>
           <div class="badge">SOC 2 Type II</div>
-          <div class="badge">GDPR 认证</div>
-          <div class="badge">军密级加密</div>
+          <div class="badge" data-i18n="index.badge.gdpr">GDPR certified</div>
+          <div class="badge" data-i18n="index.badge.mil">Military-grade encryption</div>
           <div class="badge">SSL/TLS 1.3</div>
         </div>
       </div>
@@ -127,22 +128,22 @@
           <div class="stat-item">
             <span class="stat-number" data-target="10000000">0</span>
             <span class="stat-suffix">+</span>
-            <p class="stat-label">全球企业领袖用户</p>
+            <p class="stat-label" data-i18n="index.stat1">Business users worldwide</p>
           </div>
           <div class="stat-item">
             <span class="stat-number" data-target="5000000000">0</span>
             <span class="stat-suffix">+</span>
-            <p class="stat-label">加密邮件安全送达</p>
+            <p class="stat-label" data-i18n="index.stat2">Encrypted emails delivered</p>
           </div>
           <div class="stat-item">
             <span class="stat-number" data-target="99">0</span>
             <span class="stat-suffix">.999%</span>
-            <p class="stat-label">极致服务可用性</p>
+            <p class="stat-label" data-i18n="index.stat3">Service availability</p>
           </div>
           <div class="stat-item">
             <span class="stat-number" data-target="200">0</span>
             <span class="stat-suffix">+</span>
-            <p class="stat-label">顶级企业客户</p>
+            <p class="stat-label" data-i18n="index.stat4">Enterprise customers</p>
           </div>
         </div>
       </div>
@@ -150,7 +151,7 @@
 
     <section class="partners section-sm">
       <div class="container">
-        <p class="partners-label">✦ 世界500强企业共同信赖之选 ✦</p>
+        <p class="partners-label" data-i18n="index.partners">✦ Trusted by leading enterprises worldwide ✦</p>
         <div class="logo-carousel">
           <div class="logo-track">
             <div class="logo-item">NeoLink</div>
@@ -171,38 +172,38 @@
     <section class="features section" id="features">
       <div class="container">
         <div class="section-header">
-          <h2>重新定义邮件安全标准</h2>
-          <p class="lead">以技术创新驱动，以安全为本</p>
+          <h2 data-i18n="index.features.title">Redefining email security</h2>
+          <p class="lead" data-i18n="index.features.lead">Innovation-driven, security-first</p>
         </div>
         <div class="cards-3">
           <article class="card feature-card">
             <div class="feature-icon">⚡</div>
-            <h3>极速光速引擎</h3>
-            <p>全球光速节点部署，毫秒级响应。智能路由系统自动选择最优传输路径。</p>
+            <h3 data-i18n="index.features.speed.title">Lightning-fast engine</h3>
+            <p data-i18n="index.features.speed.desc">Global edge nodes with millisecond response. Smart routing picks the optimal path automatically.</p>
             <ul class="feature-list">
-              <li>全球 50+ 数据中心</li>
-              <li>智能 DNS 解析</li>
-              <li>CDN 全球加速</li>
+              <li data-i18n="index.features.speed.li1">50+ data centers worldwide</li>
+              <li data-i18n="index.features.speed.li2">Smart DNS resolution</li>
+              <li data-i18n="index.features.speed.li3">Global CDN acceleration</li>
             </ul>
           </article>
           <article class="card feature-card">
-            <div class="feature-icon">�</div>
-            <h3>军事级安全架构</h3>
-            <p>端到端加密与 AI 量子反钓鱼系统，守护您的绝对隐私与数据安全。</p>
+            <div class="feature-icon">🔒</div>
+            <h3 data-i18n="index.features.sec.title">Military-grade security</h3>
+            <p data-i18n="index.features.sec.desc">End-to-end encryption and AI anti-phishing protect your privacy and data.</p>
             <ul class="feature-list">
-              <li>AES-256 军事加密</li>
-              <li>AI 量子级反钓鱼</li>
-              <li>零信任安全架构</li>
+              <li data-i18n="index.features.sec.li1">AES-256 encryption</li>
+              <li data-i18n="index.features.sec.li2">AI anti-phishing</li>
+              <li data-i18n="index.features.sec.li3">Zero-trust architecture</li>
             </ul>
           </article>
           <article class="card feature-card">
             <div class="feature-icon">☁️</div>
-            <h3>无限云端空间</h3>
-            <p>无限容量扩展，重要文件与历史邮件永久安全保存。</p>
+            <h3 data-i18n="index.features.cloud.title">Unlimited cloud storage</h3>
+            <p data-i18n="index.features.cloud.desc">Scale without limits. Keep files and mail history safe indefinitely.</p>
             <ul class="feature-list">
-              <li>基础版 5GB</li>
-              <li>专业版无限容量</li>
-              <li>智能压缩优化</li>
+              <li data-i18n="index.features.cloud.li1">Basic: 5 GB</li>
+              <li data-i18n="index.features.cloud.li2">Pro: unlimited</li>
+              <li data-i18n="index.features.cloud.li3">Smart compression</li>
             </ul>
           </article>
         </div>
@@ -212,29 +213,29 @@
     <section class="how-it-works section alt-bg">
       <div class="container">
         <div class="section-header">
-          <h2>三步开启极致体验</h2>
-          <p class="lead">简单高效，快速融入您的工作流</p>
+          <h2 data-i18n="index.steps.title">Get started in three steps</h2>
+          <p class="lead" data-i18n="index.steps.lead">Simple, fast, fits your workflow</p>
         </div>
         <div class="steps-grid">
           <div class="step-card">
             <div class="step-number">1</div>
             <div class="step-content">
-              <h3>即刻注册</h3>
-              <p>一键注册，30秒完成企业邮箱创建，开启您的安全通信之旅。</p>
+              <h3 data-i18n="index.steps.1.title">Sign up instantly</h3>
+              <p data-i18n="index.steps.1.desc">Create your business mailbox in 30 seconds and start secure communication.</p>
             </div>
           </div>
           <div class="step-card">
             <div class="step-number">2</div>
             <div class="step-content">
-              <h3>无缝配置</h3>
-              <p>支持全平台客户端，一键同步您的所有设备和数据。</p>
+              <h3 data-i18n="index.steps.2.title">Seamless setup</h3>
+              <p data-i18n="index.steps.2.desc">Works on every platform. Sync devices and data in one click.</p>
             </div>
           </div>
           <div class="step-card">
             <div class="step-number">3</div>
             <div class="step-content">
-              <h3>尊享极致</h3>
-              <p>体验前所未有的极致安全与光速通讯，开启高效商务新篇章。</p>
+              <h3 data-i18n="index.steps.3.title">Go premium</h3>
+              <p data-i18n="index.steps.3.desc">Experience top-tier security and speed for your business.</p>
             </div>
           </div>
         </div>
@@ -244,23 +245,23 @@
     <section class="more-features section">
       <div class="container">
         <div class="section-header">
-          <h2>全方位企业级功能矩阵</h2>
-          <p class="lead">每一项功能，都为卓越而生</p>
+          <h2 data-i18n="index.more.title">Full enterprise feature matrix</h2>
+          <p class="lead" data-i18n="index.more.lead">Every feature built for excellence</p>
         </div>
         <div class="features-grid">
           <div class="feature-row">
             <div class="feature-box">
-              <div class="feature-icon">�</div>
+              <div class="feature-icon">🧠</div>
               <div class="feature-info">
-                <h4>AI 量子级分类</h4>
-                <p>智能识别邮件优先级，量子级算法优化，让重要邮件始终优先呈现。</p>
+                <h4 data-i18n="index.more.ai.title">AI smart classification</h4>
+                <p data-i18n="index.more.ai.desc">Prioritize what matters with intelligent sorting and quantum-inspired algorithms.</p>
               </div>
             </div>
             <div class="feature-box">
               <div class="feature-icon">📱</div>
               <div class="feature-info">
-                <h4>全平台光速同步</h4>
-                <p>支持 iOS、Android、macOS、Windows、Linux，全平台实时同步。</p>
+                <h4 data-i18n="index.more.sync.title">Cross-platform sync</h4>
+                <p data-i18n="index.more.sync.desc">iOS, Android, macOS, Windows, and Linux — all in real time.</p>
               </div>
             </div>
           </div>
@@ -268,15 +269,15 @@
             <div class="feature-box">
               <div class="feature-icon">📎</div>
               <div class="feature-info">
-                <h4>超大附件</h4>
-                <p>支持最大 5GB 附件，轻松分享大型文件和高清视频。</p>
+                <h4 data-i18n="index.more.attach.title">Large attachments</h4>
+                <p data-i18n="index.more.attach.desc">Send files up to 5 GB — documents, media, and more.</p>
               </div>
             </div>
             <div class="feature-box">
               <div class="feature-icon">⏪</div>
               <div class="feature-info">
-                <h4>时光逆转撤回</h4>
-                <p>发送后后悔？5分钟内可撤回已发送邮件，智能消除尴尬。</p>
+                <h4 data-i18n="index.more.recall.title">Recall sent mail</h4>
+                <p data-i18n="index.more.recall.desc">Changed your mind? Recall within 5 minutes.</p>
               </div>
             </div>
           </div>
@@ -284,15 +285,15 @@
             <div class="feature-box">
               <div class="feature-icon">🔔</div>
               <div class="feature-info">
-                <h4>AI 智能提醒</h4>
-                <p>重要邮件智能提醒，AI 预测您关注的邮件，绝不错过关键信息。</p>
+                <h4 data-i18n="index.more.notify.title">Smart notifications</h4>
+                <p data-i18n="index.more.notify.desc">AI highlights important mail so you never miss critical updates.</p>
               </div>
             </div>
             <div class="feature-box">
               <div class="feature-icon">📊</div>
               <div class="feature-info">
-                <h4>深度数据分析</h4>
-                <p>全方位邮件统计报告，收发趋势与效率分析，助力决策优化。</p>
+                <h4 data-i18n="index.more.analytics.title">Deep analytics</h4>
+                <p data-i18n="index.more.analytics.desc">Reports on volume, trends, and efficiency to inform decisions.</p>
               </div>
             </div>
           </div>
@@ -302,19 +303,19 @@
 
     <section class="testimonials section-sm">
       <div class="container">
-        <h2>全球领袖的一致选择</h2>
+        <h2 data-i18n="index.testimonials.title">Chosen by leaders worldwide</h2>
         <div class="cards-3">
           <article class="card quote-card">
-            <p>"KoxMail 的全端光速同步和超大附件功能，彻底解决了我们跨国团队的协作痛点，效率提升300%。"</p>
-            <div class="person">陈颖 · 全球运营总监 · NeoLink</div>
+            <p data-i18n="index.testimonials.1">"KoxMail sync and large attachments solved our global team pain points — productivity up 300%."</p>
+            <div class="person" data-i18n="index.testimonials.1.author">Chen Ying · Global Ops Director · NeoLink</div>
           </article>
           <article class="card quote-card">
-            <p>"军事级安全架构令人惊叹，AI 反钓鱼系统精准识别，为我们省下难以估量的风险成本。"</p>
-            <div class="person">David Li · 首席信息安全官 · Vertex</div>
+            <p data-i18n="index.testimonials.2">"Military-grade security and AI anti-phishing saved us incalculable risk."</p>
+            <div class="person" data-i18n="index.testimonials.2.author">David Li · CISO · Vertex</div>
           </article>
           <article class="card quote-card">
-            <p>"迁移过程丝滑顺畅，团队几乎零学习成本，工作效率直接跃升至行业顶尖水平。"</p>
-            <div class="person">王哲 · 产品VP · GigaTech</div>
+            <p data-i18n="index.testimonials.3">"Migration was smooth — near-zero learning curve and a leap in efficiency."</p>
+            <div class="person" data-i18n="index.testimonials.3.author">Wang Zhe · VP Product · GigaTech</div>
           </article>
         </div>
       </div>
@@ -322,27 +323,27 @@
 
     <section class="about section alt-bg" id="about">
       <div class="container">
-        <h2>关于 KoxMail</h2>
+        <h2 data-i18n="index.about.title">About KoxMail</h2>
         <div class="z-flow">
           <div class="card">
-            <h3>重新书写通信安全的定义</h3>
-            <p>KoxMail 诞生于对极致通信体验的追求。在信息泛滥的时代，我们致力于剔除繁杂，还原沟通的本质。从创立之初，我们就坚持"用户隐私至上"的原则，打造了一款真正属于未来的邮箱产品，为全球精英提供前所未有的安全通信体验。</p>
+            <h3 data-i18n="index.about.story.title">Redefining secure communication</h3>
+            <p data-i18n="index.about.story.desc">KoxMail was born from a pursuit of exceptional communication. In an age of information overload, we strip away noise and restore the essence of connection — privacy-first email for a global audience.</p>
           </div>
           <div class="card timeline">
-            <h3>辉煌历程</h3>
+            <h3 data-i18n="index.about.timeline.title">Our journey</h3>
             <ul>
-              <li><strong>2024：</strong>自主研发端到端加密算法，荣获国际安全认证。</li>
-              <li><strong>2025：</strong>KoxMail 1.0 全球发布，半年内用户突破千万。</li>
-              <li><strong>2026：</strong>推出智能通信生态系统，实现全球数据毫秒级光速同步。</li>
+              <li data-i18n-html="index.about.timeline.li1"><strong>2024:</strong> Proprietary end-to-end encryption; international security certification.</li>
+              <li data-i18n-html="index.about.timeline.li2"><strong>2025:</strong> KoxMail 1.0 global launch; 10M+ users in six months.</li>
+              <li data-i18n-html="index.about.timeline.li3"><strong>2026:</strong> Smart communication ecosystem; millisecond global sync.</li>
             </ul>
           </div>
           <div class="card">
-            <h3>使命与愿景</h3>
-            <p><strong>使命：</strong>以创新科技为全球精英打造无缝、安全、极速的通信体验。</p>
-            <p><strong>愿景：</strong>成为全球最受尊崇的智能通信平台，重新定义数字时代的沟通方式。</p>
+            <h3 data-i18n="index.about.mission.title">Mission & vision</h3>
+            <p data-i18n-html="index.about.mission.mission"><strong>Mission:</strong> Seamless, secure, fast communication for global professionals.</p>
+            <p data-i18n-html="index.about.mission.vision"><strong>Vision:</strong> The world's most trusted intelligent communication platform.</p>
           </div>
           <div class="card team">
-            <h3>卓越团队</h3>
+            <h3 data-i18n="index.about.team.title">Leadership team</h3>
             <div class="team-grid">
               <div class="member"><span class="avatar"></span><p>CEO · Lena</p></div>
               <div class="member"><span class="avatar"></span><p>CTO · Kevin</p></div>
@@ -356,39 +357,39 @@
     <section class="security-features section alt-bg">
       <div class="container">
         <div class="section-header">
-          <h2>军事级安全防护体系</h2>
-          <p class="lead">六道防线，构建固若金汤的安全壁垒</p>
+          <h2 data-i18n="index.security.title">Military-grade security stack</h2>
+          <p class="lead" data-i18n="index.security.lead">Six layers of defense for your data</p>
         </div>
         <div class="security-grid">
           <div class="security-card">
             <div class="security-icon">🔐</div>
-            <h3>端到端量子加密</h3>
-            <p>采用 AES-256 军事级加密算法，量子抗性加密技术，唯有您能掌控数据。</p>
+            <h3 data-i18n="index.security.e2e.title">End-to-end encryption</h3>
+            <p data-i18n="index.security.e2e.desc">AES-256 and quantum-resistant techniques — only you control your data.</p>
           </div>
           <div class="security-card">
             <div class="security-icon">🛡️</div>
-            <h3>AI 量子反钓鱼</h3>
-            <p>量子级 AI 智能算法，精准识别钓鱼攻击，实时拦截恶意威胁。</p>
+            <h3 data-i18n="index.security.phish.title">AI anti-phishing</h3>
+            <p data-i18n="index.security.phish.desc">Advanced AI detects phishing and blocks threats in real time.</p>
           </div>
           <div class="security-card">
             <div class="security-icon">🔑</div>
-            <h3>零信任多重验证</h3>
-            <p>支持 TOTP、生物识别、硬件安全密钥等企业级验证方案。</p>
+            <h3 data-i18n="index.security.mfa.title">Zero-trust MFA</h3>
+            <p data-i18n="index.security.mfa.desc">TOTP, biometrics, and hardware security keys for enterprise accounts.</p>
           </div>
           <div class="security-card">
-            <div class="security-icon">�</div>
-            <h3>量子安全删除</h3>
-            <p>7次覆写擦除技术，确保数据永久销毁，无法恢复与追踪。</p>
+            <div class="security-icon">🗑️</div>
+            <h3 data-i18n="index.security.wipe.title">Secure deletion</h3>
+            <p data-i18n="index.security.wipe.desc">7-pass overwrite ensures data cannot be recovered.</p>
           </div>
           <div class="security-card">
-            <div class="security-icon">�</div>
-            <h3>国际合规认证</h3>
-            <p>通过 ISO 27001、SOC 2、GDPR 等国际顶级安全认证。</p>
+            <div class="security-icon">✅</div>
+            <h3 data-i18n="index.security.compliance.title">Global compliance</h3>
+            <p data-i18n="index.security.compliance.desc">ISO 27001, SOC 2, and GDPR certified.</p>
           </div>
           <div class="security-card">
             <div class="security-icon">📋</div>
-            <h3>全景行为审计</h3>
-            <p>完整记录所有访问行为，实时监控，异常行为秒级告警。</p>
+            <h3 data-i18n="index.security.audit.title">Full audit trail</h3>
+            <p data-i18n="index.security.audit.desc">Every access logged; anomalies alerted in seconds.</p>
           </div>
         </div>
       </div>
@@ -397,60 +398,60 @@
     <section class="pricing section" id="pricing">
       <div class="container">
         <div class="section-header">
-          <h2>选择您的尊享方案</h2>
-          <p class="lead">为每一位精英量身定制</p>
+          <h2 data-i18n="index.pricing.title">Choose your plan</h2>
+          <p class="lead" data-i18n="index.pricing.lead">Tailored for every professional</p>
         </div>
-        
+
         <div class="pricing-toggle">
-          <button class="toggle-btn active" data-period="monthly">月付</button>
-          <button class="toggle-btn" data-period="yearly">年付 <span class="save-badge">省20%</span></button>
+          <button class="toggle-btn active" data-period="monthly" data-i18n="index.pricing.monthly">Monthly</button>
+          <button class="toggle-btn" data-period="yearly"><span data-i18n="index.pricing.yearly">Yearly</span> <span class="save-badge" data-i18n="index.pricing.save">Save 20%</span></button>
         </div>
-        
+
         <div class="pricing-grid-apple">
           <div class="option-card" id="plan-basic">
             <div class="option-content">
-              <div class="option-badge">免费</div>
-              <div class="option-title">基础免费版</div>
-              <div class="option-desc">适合个人日常使用</div>
+              <div class="option-badge" data-i18n="index.pricing.basic.badge">Free</div>
+              <div class="option-title" data-i18n="index.pricing.basic.title">Basic</div>
+              <div class="option-desc" data-i18n="index.pricing.basic.desc">For everyday personal use</div>
             </div>
-            <div class="option-price">$0<span>/永久</span></div>
+            <div class="option-price"><span data-i18n="index.pricing.basic.price">$0</span><span data-i18n="index.pricing.basic.unit">/forever</span></div>
           </div>
-          
+
           <div class="option-card selected" id="plan-pro">
             <div class="option-content">
-              <div class="option-badge recommended">推荐</div>
-              <div class="option-title">专业个人版</div>
-              <div class="option-desc">适合专业人士与小型团队</div>
+              <div class="option-badge recommended" data-i18n="index.pricing.pro.badge">Recommended</div>
+              <div class="option-title" data-i18n="index.pricing.pro.title">Pro</div>
+              <div class="option-desc" data-i18n="index.pricing.pro.desc">For professionals and small teams</div>
             </div>
             <div class="option-price">
-              <span class="price-amount">$4.99</span>
-              <span class="price-unit">/月</span>
-              <span class="price-yearly" hidden>$47.88/年</span>
+              <span class="price-amount" data-i18n="index.pricing.pro.price">$4.99</span>
+              <span class="price-unit" data-i18n="index.pricing.pro.unit">/mo</span>
+              <span class="price-yearly" hidden data-i18n="index.pricing.pro.yearly">$47.88/yr</span>
             </div>
           </div>
-          
+
           <div class="option-card" id="plan-enterprise">
             <div class="option-content">
-              <div class="option-badge enterprise">企业</div>
-              <div class="option-title">企业定制版</div>
-              <div class="option-desc">适合中大型企业</div>
+              <div class="option-badge enterprise" data-i18n="index.pricing.enterprise.badge">Enterprise</div>
+              <div class="option-title" data-i18n="index.pricing.enterprise.title">Enterprise</div>
+              <div class="option-desc" data-i18n="index.pricing.enterprise.desc">For mid-to-large organizations</div>
             </div>
-            <div class="option-price">联系商务</div>
+            <div class="option-price" data-i18n="index.pricing.enterprise.price">Contact sales</div>
           </div>
         </div>
-        
+
         <div class="pricing-details">
-          <h3>您将获得</h3>
+          <h3 data-i18n="index.pricing.details.title">What you get</h3>
           <div class="feature-grid">
-            <div class="feature-item">5 GB 存储空间（专业版无限）</div>
-            <div class="feature-item">附件上限 500 MB（专业版 5 GB）</div>
-            <div class="feature-item">基础反垃圾隔离（专业版 AI 防钓鱼）</div>
-            <div class="feature-item">社区支持（专业版 24/7 优先客服）</div>
+            <div class="feature-item" data-i18n="index.pricing.details.f1">5 GB storage (unlimited on Pro)</div>
+            <div class="feature-item" data-i18n="index.pricing.details.f2">500 MB attachments (5 GB on Pro)</div>
+            <div class="feature-item" data-i18n="index.pricing.details.f3">Spam filtering (AI anti-phishing on Pro)</div>
+            <div class="feature-item" data-i18n="index.pricing.details.f4">Community support (24/7 priority on Pro)</div>
           </div>
-          
+
           <div class="pricing-actions">
-            <a class="btn btn-accent" href="subscribe.html">立即订阅专业版</a>
-            <a class="btn btn-outline" href="business.html">了解企业方案</a>
+            <a class="btn btn-accent" href="subscribe.html" data-i18n="index.pricing.subscribe">Subscribe to Pro</a>
+            <a class="btn btn-outline" href="business.html" data-i18n="index.pricing.enterpriseLink">Explore enterprise</a>
           </div>
         </div>
       </div>
@@ -458,86 +459,86 @@
 
     <section class="faq section alt-bg" id="faq">
       <div class="container">
-        <h2>常见问题</h2>
+        <h2 data-i18n="index.faq.title">Frequently asked questions</h2>
         <div class="faq-top">
-          <input type="search" id="faqSearch" placeholder="搜索您关心的问题..." aria-label="FAQ 搜索">
+          <input type="search" id="faqSearch" data-i18n-placeholder="index.faq.search" placeholder="Search questions..." data-i18n-aria="index.faq.searchAria" aria-label="FAQ search">
           <div class="tags" id="faqTags">
-            <span class="tag-btn active" data-filter="all">全部</span>
-            <span class="tag-btn" data-filter="account">账户安全</span>
-            <span class="tag-btn" data-filter="client">客户端配置</span>
-            <span class="tag-btn" data-filter="security">隐私加密</span>
-            <span class="tag-btn" data-filter="billing">订阅付费</span>
+            <span class="tag-btn active" data-filter="all" data-i18n="index.faq.tag.all">All</span>
+            <span class="tag-btn" data-filter="account" data-i18n="index.faq.tag.account">Account & security</span>
+            <span class="tag-btn" data-filter="client" data-i18n="index.faq.tag.client">Client setup</span>
+            <span class="tag-btn" data-filter="security" data-i18n="index.faq.tag.security">Privacy & encryption</span>
+            <span class="tag-btn" data-filter="billing" data-i18n="index.faq.tag.billing">Billing</span>
           </div>
         </div>
         <div class="accordion" id="faqAccordion">
           <article class="accordion-item" data-category="account">
             <button class="accordion-trigger" aria-expanded="false">
-              <span>如何找回密码？</span><span class="icon">+</span>
+              <span data-i18n="index.faq.q1">How do I reset my password?</span><span class="icon">+</span>
             </button>
             <div class="accordion-panel">
-              <p>您可以通过登录页的"忘记密码"链接，通过注册时绑定的备用邮箱或安全手机号进行验证码重置。</p>
+              <p data-i18n="index.faq.a1">Use "Forgot password" on the sign-in page. Verify via your recovery email or phone.</p>
             </div>
           </article>
           <article class="accordion-item" data-category="account">
             <button class="accordion-trigger" aria-expanded="false">
-              <span>如何修改绑定的手机号或备用邮箱？</span><span class="icon">+</span>
+              <span data-i18n="index.faq.q2">How do I change my phone or recovery email?</span><span class="icon">+</span>
             </button>
             <div class="accordion-panel">
-              <p>登录后进入 [设置] → [账户安全]，验证当前密码后即可修改绑定的手机号或备用邮箱地址。</p>
+              <p data-i18n="index.faq.a2">After sign-in, go to Settings → Account security, verify your password, then update contact info.</p>
             </div>
           </article>
           <article class="accordion-item" data-category="client">
             <button class="accordion-trigger" aria-expanded="false">
-              <span>KoxMail 支持 POP3/IMAP 吗？</span><span class="icon">+</span>
+              <span data-i18n="index.faq.q3">Does KoxMail support POP3/IMAP?</span><span class="icon">+</span>
             </button>
             <div class="accordion-panel">
-              <p>支持。您可以在 [设置]-[客户端授权] 中开启 IMAP/SMTP 服务，系统将为您生成专属的第三方客户端授权密码。</p>
+              <p data-i18n="index.faq.a3">Yes. Enable IMAP/SMTP under Settings → Client access for an app-specific password.</p>
             </div>
           </article>
           <article class="accordion-item" data-category="client">
             <button class="accordion-trigger" aria-expanded="false">
-              <span>如何在 Outlook 或 Apple Mail 中配置 KoxMail？</span><span class="icon">+</span>
+              <span data-i18n="index.faq.q4">How do I set up Outlook or Apple Mail?</span><span class="icon">+</span>
             </button>
             <div class="accordion-panel">
-              <p>在客户端设置中选择 IMAP/SMTP，输入您的 KoxMail 邮箱地址和生成的授权码即可。服务器地址：imap.koxmail.com / smtp.koxmail.com。</p>
+              <p data-i18n="index.faq.a4">Choose IMAP/SMTP, enter your KoxMail address and app password. Servers: imap.koxmail.com / smtp.koxmail.com.</p>
             </div>
           </article>
           <article class="accordion-item" data-category="security">
             <button class="accordion-trigger" aria-expanded="false">
-              <span>如何启用双重验证 (2FA)？</span><span class="icon">+</span>
+              <span data-i18n="index.faq.q5">How do I enable two-factor authentication (2FA)?</span><span class="icon">+</span>
             </button>
             <div class="accordion-panel">
-              <p>进入 [设置] → [账户安全] → [双重验证]，扫描二维码绑定 authenticator 应用，或使用手机短信验证作为备用方式。</p>
+              <p data-i18n="index.faq.a5">Go to Settings → Account security → Two-factor authentication. Scan the QR code or use SMS backup.</p>
             </div>
           </article>
           <article class="accordion-item" data-category="security">
             <button class="accordion-trigger" aria-expanded="false">
-              <span>手机丢失后如何恢复账户登录？</span><span class="icon">+</span>
+              <span data-i18n="index.faq.q6">I lost my phone — how do I sign in?</span><span class="icon">+</span>
             </button>
             <div class="accordion-panel">
-              <p>如果您设置了备用邮箱，可通过备用邮箱获取验证码恢复登录。或联系 [技术支持中心] 提供身份证明进行人工恢复。</p>
+              <p data-i18n="index.faq.a6">Use your recovery email for a code, or contact support with ID verification.</p>
             </div>
           </article>
           <article class="accordion-item" data-category="billing">
             <button class="accordion-trigger" aria-expanded="false">
-              <span>如何申请开具发票？</span><span class="icon">+</span>
+              <span data-i18n="index.faq.q7">How do I request an invoice?</span><span class="icon">+</span>
             </button>
             <div class="accordion-panel">
-              <p>登录后进入 [账户] → [账单与订阅]，点击"申请发票"，填写企业开票信息，我们将在 3 个工作日内开具并发送至您的邮箱。</p>
+              <p data-i18n="index.faq.a7">Go to Account → Billing & subscription → Request invoice. We issue within 3 business days.</p>
             </div>
           </article>
           <article class="accordion-item" data-category="billing">
             <button class="accordion-trigger" aria-expanded="false">
-              <span>支持哪些支付方式？</span><span class="icon">+</span>
+              <span data-i18n="index.faq.q8">What payment methods are supported?</span><span class="icon">+</span>
             </button>
             <div class="accordion-panel">
-              <p>我们支持 Visa、MasterCard、American Express 信用卡，以及支付宝、微信支付、企业对公转账等多种方式。</p>
+              <p data-i18n="index.faq.a8">Visa, MasterCard, Amex, Alipay, WeChat Pay, and bank transfer for enterprises.</p>
             </div>
           </article>
         </div>
         <div class="empty-state" id="faqEmptyState" hidden>
-          <p>未找到相关结果，试试其他关键词。</p>
-          <a class="btn btn-outline" href="support.html">联系技术支持</a>
+          <p data-i18n="index.faq.empty">No results found. Try another keyword.</p>
+          <a class="btn btn-outline" href="support.html" data-i18n="index.faq.contact">Contact support</a>
         </div>
       </div>
     </section>
@@ -545,9 +546,9 @@
     <section class="blog-preview section" id="blog">
       <div class="container">
         <div class="section-header">
-          <h2>前沿洞察</h2>
-          <p class="lead">探索安全通信的最新动态与技术革新</p>
-          <a class="link-underline" href="blog.html">查看全部文章</a>
+          <h2 data-i18n="index.blog.title">Insights</h2>
+          <p class="lead" data-i18n="index.blog.lead">Latest in secure communication and innovation</p>
+          <a class="link-underline" href="blog.html" data-i18n="index.blog.viewAll">View all articles</a>
         </div>
         <div class="blog-grid">
           <article class="blog-card">
@@ -555,11 +556,11 @@
               <div class="skeleton" style="width: 100%; height: 180px;"></div>
             </div>
             <div class="blog-content">
-              <span class="badge">产品更新</span>
-              <h3>全新 AI 量子级助手上线，邮件处理效率提升 500%</h3>
-              <p>革命性的 AI 量子级智能助手，可自动分类、撰写回复、智能预测您关注的邮件，开启前所未有的高效体验。</p>
+              <span class="badge" data-i18n="index.blog.1.badge">Product update</span>
+              <h3 data-i18n="index.blog.1.title">New AI assistant — 5× faster mail handling</h3>
+              <p data-i18n="index.blog.1.desc">Auto-sort, draft replies, and surface what matters most.</p>
               <div class="blog-meta">
-                <span>2026年5月</span>
+                <span data-i18n="index.blog.1.date">May 2026</span>
               </div>
             </div>
           </article>
@@ -568,11 +569,11 @@
               <div class="skeleton" style="width: 100%; height: 180px;"></div>
             </div>
             <div class="blog-content">
-              <span class="badge">安全公告</span>
-              <h3>如何构建固若金汤的企业邮件安全体系</h3>
-              <p>深入解析 KoxMail 的军事级安全架构，从端到端量子加密到零信任访问控制，全方位守护您的数据资产。</p>
+              <span class="badge" data-i18n="index.blog.2.badge">Security</span>
+              <h3 data-i18n="index.blog.2.title">Building an unbreakable enterprise mail security stack</h3>
+              <p data-i18n="index.blog.2.desc">From E2E encryption to zero-trust access — how KoxMail protects your assets.</p>
               <div class="blog-meta">
-                <span>2026年4月</span>
+                <span data-i18n="index.blog.2.date">April 2026</span>
               </div>
             </div>
           </article>
@@ -581,11 +582,11 @@
               <div class="skeleton" style="width: 100%; height: 180px;"></div>
             </div>
             <div class="blog-content">
-              <span class="badge">高效秘籍</span>
-              <h3>全球顶尖商业领袖都在用的 10 个邮件效率法则</h3>
-              <p>揭秘精英阶层的邮件管理秘诀，从 AI 辅助到时间块管理，全面提升您的商务沟通效率与决策质量。</p>
+              <span class="badge" data-i18n="index.blog.3.badge">Productivity</span>
+              <h3 data-i18n="index.blog.3.title">10 email habits top business leaders use</h3>
+              <p data-i18n="index.blog.3.desc">From AI assist to time blocking — elevate communication and decisions.</p>
               <div class="blog-meta">
-                <span>2026年3月</span>
+                <span data-i18n="index.blog.3.date">March 2026</span>
               </div>
             </div>
           </article>
@@ -596,43 +597,43 @@
     <section class="contact section" id="contact">
       <div class="container grid-2">
         <div class="contact-info">
-          <h2>联系我们</h2>
-          <p><strong>全球总部：</strong>硅谷科技大道 888 号 Kox 大厦</p>
-          <p><strong>商务合作：</strong>enterprise@koxmail.com</p>
-          <p><strong>专属热线：</strong>400-888-KOX（7×24 小时全球服务）</p>
-          <div class="map-placeholder" aria-label="地图占位图">Map Placeholder</div>
+          <h2 data-i18n="index.contact.title">Contact us</h2>
+          <p data-i18n-html="index.contact.hq"><strong>Global HQ:</strong> 888 Kox Tower, Silicon Valley Tech Blvd</p>
+          <p data-i18n-html="index.contact.sales"><strong>Business:</strong> enterprise@koxmail.com</p>
+          <p data-i18n-html="index.contact.phone"><strong>Hotline:</strong> 400-888-KOX (24/7 worldwide)</p>
+          <div class="map-placeholder" aria-label="Map placeholder">Map Placeholder</div>
         </div>
         <div class="card">
-          <h3>在线反馈</h3>
+          <h3 data-i18n="index.contact.form.title">Send feedback</h3>
           <form id="contactForm" novalidate>
             <div class="field">
-              <label for="name">姓名 *</label>
+              <label for="name" data-i18n="index.contact.name">Name *</label>
               <input id="name" name="name" required>
               <small class="error-msg"></small>
             </div>
             <div class="field">
-              <label for="email">电子邮箱 *</label>
+              <label for="email" data-i18n="index.contact.email">Email *</label>
               <input id="email" name="email" type="email" required>
               <small class="error-msg"></small>
             </div>
             <div class="field">
-              <label for="subject">主题</label>
+              <label for="subject" data-i18n="index.contact.subject">Subject</label>
               <input id="subject" name="subject">
               <small class="error-msg"></small>
             </div>
             <div class="field">
-              <label for="message">留言内容 *</label>
+              <label for="message" data-i18n="index.contact.message">Message *</label>
               <textarea id="message" name="message" rows="5" required></textarea>
               <small class="error-msg"></small>
             </div>
             <button class="btn btn-accent full" id="contactSubmit" type="submit">
-              <span class="btn-text">提交反馈</span>
+              <span class="btn-text" data-i18n="index.contact.submit">Submit feedback</span>
               <span class="spinner" aria-hidden="true"></span>
             </button>
           </form>
           <div class="success-card" id="contactSuccess" hidden>
-            <h4>提交成功</h4>
-            <p>感谢您的反馈！我们的团队将在 24 小时内与您取得联系。</p>
+            <h4 data-i18n="index.contact.success.title">Submitted</h4>
+            <p data-i18n="index.contact.success.desc">Thank you! Our team will respond within 24 hours.</p>
           </div>
         </div>
       </div>
@@ -640,10 +641,10 @@
 
     <section class="cta section-sm">
       <div class="container cta-box">
-        <h2>开启您的极致通信之旅</h2>
-        <p class="lead">立即注册尊享 30 天全功能免费体验，全球精英首选的邮箱服务</p>
+        <h2 data-i18n="index.cta.title">Start your communication journey</h2>
+        <p class="lead" data-i18n="index.cta.lead">Sign up for 30 days of full features free — the inbox leaders choose</p>
         <a class="btn btn-accent btn-large" href="register.html">
-          立即开启免费体验
+          <span data-i18n="index.cta.btn">Start free trial</span>
           <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M5 12h14M12 5l7 7-7 7"/>
           </svg>
@@ -652,12 +653,12 @@
     </section>
 
     <div class="floating-actions" id="floatingActions">
-      <button class="float-btn" id="scrollTopBtn" title="返回顶部" aria-label="返回顶部">
+      <button class="float-btn" id="scrollTopBtn" data-i18n-title="float.scrollTop" data-i18n-aria="float.scrollTop" title="Back to top" aria-label="Back to top">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M12 5v14M5 12l7-7 7 7"/>
         </svg>
       </button>
-      <button class="float-btn" id="darkModeBtn" title="切换主题" aria-label="切换主题">
+      <button class="float-btn" id="darkModeBtn" data-i18n-title="float.theme" data-i18n-aria="float.theme" title="Toggle theme" aria-label="Toggle theme">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
         </svg>
@@ -668,42 +669,43 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <h4>核心功能</h4>
-        <a href="index.html#features">AI 智能管理</a>
-        <a href="index.html#features">全平台光速同步</a>
-        <a href="index.html#pricing">无限云端空间</a>
+        <h4 data-i18n="footer.features">Features</h4>
+        <a href="index.html#features" data-i18n="footer.features.ai">AI inbox management</a>
+        <a href="index.html#features" data-i18n="footer.features.sync">Cross-platform sync</a>
+        <a href="index.html#pricing" data-i18n="footer.features.storage">Unlimited cloud storage</a>
       </div>
       <div>
-        <h4>企业服务</h4>
-        <a href="index.html#about">关于 KoxMail</a>
-        <a href="business.html">企业解决方案</a>
-        <a href="index.html#pricing">定制化方案</a>
+        <h4 data-i18n="footer.business">Business</h4>
+        <a href="index.html#about" data-i18n="footer.business.about">About KoxMail</a>
+        <a href="business.html" data-i18n="footer.business.solutions">Enterprise solutions</a>
+        <a href="index.html#pricing" data-i18n="footer.business.custom">Custom plans</a>
       </div>
       <div>
-        <h4>安全合规</h4>
+        <h4 data-i18n="footer.security">Security & compliance</h4>
         <a href="privacy.html">ISO 27001</a>
         <a href="privacy.html">SOC 2</a>
-        <a href="privacy.html">GDPR 合规</a>
+        <a href="privacy.html" data-i18n="footer.security.gdpr">GDPR compliant</a>
       </div>
       <div>
-        <h4>专属支持</h4>
-        <a href="index.html#faq">常见问题</a>
-        <a href="support.html">7×24 技术支持</a>
-        <a href="support.html">联系商务</a>
+        <h4 data-i18n="footer.support">Support</h4>
+        <a href="index.html#faq" data-i18n="footer.support.faq">FAQ</a>
+        <a href="support.html" data-i18n="footer.support.tech">24/7 technical support</a>
+        <a href="support.html" data-i18n="footer.support.sales">Contact sales</a>
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>© 2026 KoxMail. 重新定义数字时代的沟通方式.</p>
+      <p data-i18n="footer.copyright">© 2026 KoxMail. Redefining communication in the digital age.</p>
       <div class="footer-links">
-        <a href="privacy.html">隐私政策</a>
-        <a href="terms.html">服务条款</a>
-        <a href="support.html" aria-label="微博">微博</a>
-        <a href="support.html" aria-label="微信公众号">微信</a>
+        <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+        <a href="terms.html" data-i18n="footer.terms">Terms of Service</a>
+        <a href="support.html" data-i18n="footer.weibo" aria-label="Weibo">Weibo</a>
+        <a href="support.html" data-i18n="footer.wechat" aria-label="WeChat">WeChat</a>
         <a href="support.html" aria-label="LinkedIn">LinkedIn</a>
       </div>
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
